@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5B25225344008F0155 /* AppDelegate.swift */; };
 		B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5D25225344008F0155 /* SceneDelegate.swift */; };
-		B4B46F6025225344008F0155 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5F25225344008F0155 /* ViewController.swift */; };
+		B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5F25225344008F0155 /* TalksViewController.swift */; };
 		B4B46F6325225344008F0155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B46F6125225344008F0155 /* Main.storyboard */; };
 		B4B46F6525225344008F0155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B46F6425225344008F0155 /* Assets.xcassets */; };
 		B4B46F6825225344008F0155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B46F6625225344008F0155 /* LaunchScreen.storyboard */; };
 		B4B46F7325225344008F0155 /* CleverTalksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F7225225344008F0155 /* CleverTalksTests.swift */; };
 		B4B46F7E25225344008F0155 /* CleverTalksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F7D25225344008F0155 /* CleverTalksUITests.swift */; };
+		B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9525225412008F0155 /* SignUpViewController.swift */; };
+		B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9A25225423008F0155 /* SignInViewController.swift */; };
+		B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */; };
+		B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FA42522543D008F0155 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		B4B46F5825225344008F0155 /* CleverTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B46F5B25225344008F0155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B46F5D25225344008F0155 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4B46F5F25225344008F0155 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4B46F5F25225344008F0155 /* TalksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksViewController.swift; sourceTree = "<group>"; };
 		B4B46F6225225344008F0155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4B46F6425225344008F0155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B46F6725225344008F0155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		B4B46F7925225344008F0155 /* CleverTalksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleverTalksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B46F7D25225344008F0155 /* CleverTalksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverTalksUITests.swift; sourceTree = "<group>"; };
 		B4B46F7F25225344008F0155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B46F9525225412008F0155 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B4B46F9A25225423008F0155 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTalkViewController.swift; sourceTree = "<group>"; };
+		B4B46FA42522543D008F0155 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,10 @@
 		B4B46F5A25225344008F0155 /* CleverTalks */ = {
 			isa = PBXGroup;
 			children = (
-				B4B46F5B25225344008F0155 /* AppDelegate.swift */,
-				B4B46F5D25225344008F0155 /* SceneDelegate.swift */,
-				B4B46F5F25225344008F0155 /* ViewController.swift */,
-				B4B46F6125225344008F0155 /* Main.storyboard */,
-				B4B46F6425225344008F0155 /* Assets.xcassets */,
-				B4B46F6625225344008F0155 /* LaunchScreen.storyboard */,
+				B4B46FA925225446008F0155 /* Resources */,
+				B4B46FAB25225484008F0155 /* Models */,
+				B4B46FAA25225455008F0155 /* Views */,
+				B4B46F8E25225383008F0155 /* Controllers */,
 				B4B46F6925225344008F0155 /* Info.plist */,
 			);
 			path = CleverTalks;
@@ -126,6 +132,44 @@
 				B4B46F7F25225344008F0155 /* Info.plist */,
 			);
 			path = CleverTalksUITests;
+			sourceTree = "<group>";
+		};
+		B4B46F8E25225383008F0155 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F5F25225344008F0155 /* TalksViewController.swift */,
+				B4B46F9525225412008F0155 /* SignUpViewController.swift */,
+				B4B46F9A25225423008F0155 /* SignInViewController.swift */,
+				B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */,
+				B4B46FA42522543D008F0155 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4B46FA925225446008F0155 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F5D25225344008F0155 /* SceneDelegate.swift */,
+				B4B46F5B25225344008F0155 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4B46FAA25225455008F0155 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F6425225344008F0155 /* Assets.xcassets */,
+				B4B46F6625225344008F0155 /* LaunchScreen.storyboard */,
+				B4B46F6125225344008F0155 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4B46FAB25225484008F0155 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B46F6025225344008F0155 /* ViewController.swift in Sources */,
+				B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */,
 				B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */,
+				B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */,
+				B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */,
+				B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */,
+				B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */,
 				B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L284H832KA;
 				INFOPLIST_FILE = CleverTalks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L284H832KA;
 				INFOPLIST_FILE = CleverTalks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
