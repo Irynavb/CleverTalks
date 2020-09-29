@@ -5,8 +5,8 @@
 //  Created by Iryna V Betancourt on 9/28/20.
 //
 
-import UIKit
 import Anchorage
+import FirebaseAuth
 
 class TalksViewController: UIViewController {
 
@@ -24,15 +24,20 @@ class TalksViewController: UIViewController {
         imageView.edgeAnchors == view.edgeAnchors
         imageView.centerAnchors == view.centerAnchors
 
+//        DatabaseManager.shared.insertUser(with: <#T##ChatAppUser#>)
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
 
         super.viewDidAppear(animated)
 
-        let isSignedIn = UserDefaults.standard.bool(forKey: "signed_in")
+        validateAuth()
 
-        if  !isSignedIn {
+    }
+
+    private func validateAuth() {
+        if  FirebaseAuth.Auth.auth().currentUser == nil {
 
             let vc = SignInViewController()
             let nav = UINavigationController(rootViewController: vc)
