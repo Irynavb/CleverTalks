@@ -49,6 +49,6 @@ class NewTalkViewController: UIViewController {
 
 extension NewTalkViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
+        
     }
 }
