@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51E2747F22E91521B87CAB3A /* Pods_CleverTalksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */; };
+		5EA7114934DFE47774CF3287 /* Pods_CleverTalks_CleverTalksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */; };
+		96CCAC3C2F6C782133F52433 /* Pods_CleverTalks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */; };
 		B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5B25225344008F0155 /* AppDelegate.swift */; };
 		B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5D25225344008F0155 /* SceneDelegate.swift */; };
 		B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5F25225344008F0155 /* TalksViewController.swift */; };
@@ -19,6 +22,7 @@
 		B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9A25225423008F0155 /* SignInViewController.swift */; };
 		B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */; };
 		B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FA42522543D008F0155 /* ProfileViewController.swift */; };
+		B4B46FBD25225D4E008F0155 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FBC25225D4E008F0155 /* Appearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015CDF84A94E8B4F5D88EB63 /* Pods-CleverTalksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalksTests.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalksTests/Pods-CleverTalksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		048D74616D08474F5BB095B2 /* Pods-CleverTalks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalks/Pods-CleverTalks.debug.xcconfig"; sourceTree = "<group>"; };
+		2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalksTests.release.xcconfig"; path = "Target Support Files/Pods-CleverTalksTests/Pods-CleverTalksTests.release.xcconfig"; sourceTree = "<group>"; };
+		66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks-CleverTalksUITests.release.xcconfig"; path = "Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalks_CleverTalksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B46F5825225344008F0155 /* CleverTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B46F5B25225344008F0155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B46F5D25225344008F0155 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +67,10 @@
 		B4B46F9A25225423008F0155 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTalkViewController.swift; sourceTree = "<group>"; };
 		B4B46FA42522543D008F0155 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B4B46FBC25225D4E008F0155 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks.release.xcconfig"; path = "Target Support Files/Pods-CleverTalks/Pods-CleverTalks.release.xcconfig"; sourceTree = "<group>"; };
+		FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks-CleverTalksUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CCAC3C2F6C782133F52433 /* Pods_CleverTalks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E2747F22E91521B87CAB3A /* Pods_CleverTalksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +94,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA7114934DFE47774CF3287 /* Pods_CleverTalks_CleverTalksUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B33AFB40F0D970A9598A156 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				048D74616D08474F5BB095B2 /* Pods-CleverTalks.debug.xcconfig */,
+				D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */,
+				FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */,
+				66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */,
+				015CDF84A94E8B4F5D88EB63 /* Pods-CleverTalksTests.debug.xcconfig */,
+				3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B4B46F4F25225344008F0155 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +121,8 @@
 				B4B46F7125225344008F0155 /* CleverTalksTests */,
 				B4B46F7C25225344008F0155 /* CleverTalksUITests */,
 				B4B46F5925225344008F0155 /* Products */,
+				6B33AFB40F0D970A9598A156 /* Pods */,
+				E39E94BAD041ED5883B75E0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +183,7 @@
 			children = (
 				B4B46F5D25225344008F0155 /* SceneDelegate.swift */,
 				B4B46F5B25225344008F0155 /* AppDelegate.swift */,
+				B4B46FBC25225D4E008F0155 /* Appearance.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -158,9 +191,8 @@
 		B4B46FAA25225455008F0155 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4B46FBA25225D1D008F0155 /* Storyboards */,
 				B4B46F6425225344008F0155 /* Assets.xcassets */,
-				B4B46F6625225344008F0155 /* LaunchScreen.storyboard */,
-				B4B46F6125225344008F0155 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +204,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B4B46FBA25225D1D008F0155 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F6125225344008F0155 /* Main.storyboard */,
+				B4B46F6625225344008F0155 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E39E94BAD041ED5883B75E0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */,
+				85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */,
+				2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4B46F8225225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalks" */;
 			buildPhases = (
+				AF928694AC62DB62C26BB37B /* [CP] Check Pods Manifest.lock */,
 				B4B46F5425225344008F0155 /* Sources */,
 				B4B46F5525225344008F0155 /* Frameworks */,
 				B4B46F5625225344008F0155 /* Resources */,
+				8E29FA40F07E7BB8BA539998 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4B46F8525225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalksTests" */;
 			buildPhases = (
+				356F3731BD437E4B7FBA04BA /* [CP] Check Pods Manifest.lock */,
 				B4B46F6A25225344008F0155 /* Sources */,
 				B4B46F6B25225344008F0155 /* Frameworks */,
 				B4B46F6C25225344008F0155 /* Resources */,
@@ -214,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4B46F8825225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalksUITests" */;
 			buildPhases = (
+				7EADF9D1C418B08C0A7393E6 /* [CP] Check Pods Manifest.lock */,
 				B4B46F7525225344008F0155 /* Sources */,
 				B4B46F7625225344008F0155 /* Frameworks */,
 				B4B46F7725225344008F0155 /* Resources */,
+				FA8DEDDA1392A321902AC54F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +353,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		356F3731BD437E4B7FBA04BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleverTalksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EADF9D1C418B08C0A7393E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleverTalks-CleverTalksUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E29FA40F07E7BB8BA539998 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF928694AC62DB62C26BB37B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleverTalks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA8DEDDA1392A321902AC54F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4B46F5425225344008F0155 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -305,6 +464,7 @@
 				B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */,
 				B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */,
 				B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */,
+				B4B46FBD25225D4E008F0155 /* Appearance.swift in Sources */,
 				B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */,
 				B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */,
 				B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */,
@@ -481,6 +641,7 @@
 		};
 		B4B46F8325225344008F0155 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048D74616D08474F5BB095B2 /* Pods-CleverTalks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -501,6 +662,7 @@
 		};
 		B4B46F8425225344008F0155 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -521,6 +683,7 @@
 		};
 		B4B46F8625225344008F0155 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 015CDF84A94E8B4F5D88EB63 /* Pods-CleverTalksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +706,7 @@
 		};
 		B4B46F8725225344008F0155 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -565,6 +729,7 @@
 		};
 		B4B46F8925225344008F0155 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +750,7 @@
 		};
 		B4B46F8A25225344008F0155 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
