@@ -19,6 +19,9 @@ class SignInViewController: UIViewController {
     private let imageView = UIImageView().then {
         $0.image = #imageLiteral(resourceName: "SmallLogoImage")
         $0.contentMode = .scaleAspectFit
+        $0.layer.masksToBounds = true
+        $0.layer.borderWidth = 2
+        $0.layer.borderColor = UIColor.darkGreen.cgColor
     }
 
     private let emailField = UITextField().then {
@@ -87,7 +90,7 @@ class SignInViewController: UIViewController {
                                  y: 50,
                                  width: size,
                                  height: size)
-
+        imageView.layer.cornerRadius = imageView.width / 2.0
         emailField.frame = CGRect(x: 30,
                                   y: imageView.bottom + 30,
                                   width: scrollView.width - 60,

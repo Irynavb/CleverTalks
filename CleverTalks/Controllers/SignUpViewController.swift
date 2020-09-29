@@ -15,9 +15,12 @@ class SignUpViewController: UIViewController {
         return scrollView
     }()
 
-    private let imageView = UIImageView().then {
+    let imageView = UIImageView().then {
         $0.image = #imageLiteral(resourceName: "icn-tab-profile")
         $0.contentMode = .scaleAspectFit
+        $0.layer.masksToBounds = true
+        $0.layer.borderWidth = 2
+        $0.layer.borderColor = UIColor.darkGreen.cgColor
     }
 
     private let firstNameField = UITextField().then {
@@ -85,7 +88,6 @@ class SignUpViewController: UIViewController {
         title = "Create Account"
         view.backgroundColor = .backgroundLightGreen
 
-        //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(signUpPressed))
 
         signUpButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
 
@@ -114,7 +116,7 @@ class SignUpViewController: UIViewController {
     }
 
     @objc private func didTapChangeProfilePicture() {
-        print("Change Picture Called")
+        presentPhotoActionSheet()
     }
 
     override func viewDidLayoutSubviews() {
@@ -125,6 +127,7 @@ class SignUpViewController: UIViewController {
                                  y: 50,
                                  width: size,
                                  height: size)
+        imageView.layer.cornerRadius = imageView.width / 2.0
         firstNameField.frame = CGRect(x: 30,
                                   y: imageView.bottom + 30,
                                   width: scrollView.width - 60,
