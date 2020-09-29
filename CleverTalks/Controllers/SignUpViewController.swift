@@ -6,6 +6,7 @@
 //
 
 import Anchorage
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
@@ -89,7 +90,7 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .backgroundLightGreen
 
 
-        signUpButton.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(didPressSignUp), for: .touchUpInside)
 
         emailField.delegate = self
         passwordField.delegate = self
@@ -173,7 +174,16 @@ class SignUpViewController: UIViewController {
             return
         }
 
-        // Firebase Sign In
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+            guard let result = authResult, error == nil else {
+                print("Error creating a user")
+                return
+
+            }
+
+            let user = result.user
+            print("Created user: \(user)")
+        })
 
     }
 
@@ -207,7 +217,7 @@ extension SignUpViewController: UITextFieldDelegate {
             passwordField.becomeFirstResponder()
         }
         else if textField == passwordField {
-            signUpPressed()
+            didPressSignUp()
         }
 
         return true
