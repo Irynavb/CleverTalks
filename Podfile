@@ -16,6 +16,11 @@ target 'CleverTalks' do
 
   pod 'GoogleSignIn'
 
+  pod 'MessageKit'
+  pod 'JGProgressHUD'
+  pod 'RealmSwift'
+  pod 'SDWebImage'
+
   # Pods for CleverTalks
 
   target 'CleverTalksTests' do

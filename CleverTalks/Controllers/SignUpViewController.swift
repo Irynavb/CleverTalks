@@ -7,8 +7,11 @@
 
 import Anchorage
 import FirebaseAuth
+import JGProgressHUD
 
 class SignUpViewController: UIViewController {
+
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -175,11 +178,17 @@ class SignUpViewController: UIViewController {
             return
         }
 
+        spinner.show(in: view)
 
         DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
             guard let strongSelf = self else {
                 return
             }
+
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss()
+            }
+
             guard !exists else {
                 // user already exists
                 strongSelf.alertUserSignUpError(message: "A user account with this email already exists.")
