@@ -9,6 +9,7 @@ import Then
 import Anchorage
 import FirebaseAuth
 import FBSDKLoginKit
+import GoogleSignIn
 
 class SignInViewController: UIViewController {
 
@@ -64,9 +65,24 @@ class SignInViewController: UIViewController {
         $0.permissions = ["email, public_profile"]
     }
 
+    private let googleSignInButton = GIDSignInButton().then {
+        $0.style = .wide
+    }
+
+    private var signInObserver: NSObjectProtocol?
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+        signInObserver = NotificationCenter.default.addObserver(forName: .didSignInNotificanion, object: nil, queue: .main, using: { [weak self] _ in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+        })
+
+        GIDSignIn.sharedInstance()?.presentingViewController = self
 
         title = "Sign In"
         view.backgroundColor = .backgroundLightGreen
@@ -88,7 +104,14 @@ class SignInViewController: UIViewController {
         scrollView.addSubview(passwordField)
         scrollView.addSubview(signInButton)
         scrollView.addSubview(facebookSignInButton)
+        scrollView.addSubview(googleSignInButton)
 
+    }
+
+    deinit {
+        if let observer = signInObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -117,7 +140,10 @@ class SignInViewController: UIViewController {
                                   y: signInButton.bottom + 20,
                                   width: scrollView.width - 60,
                                   height: 52)
-//        facebookSignInButton.frame.origin.y = signInButton.bottom
+        googleSignInButton.frame = CGRect(x: 30,
+                                  y: facebookSignInButton.bottom + 20,
+                                  width: scrollView.width - 60,
+                                  height: 52)
     }
 
     @objc private func signInPressed() {

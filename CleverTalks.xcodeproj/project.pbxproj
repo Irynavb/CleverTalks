@@ -252,6 +252,7 @@
 				B4B46F5525225344008F0155 /* Frameworks */,
 				B4B46F5625225344008F0155 /* Resources */,
 				8E29FA40F07E7BB8BA539998 /* [CP] Embed Pods Frameworks */,
+				4C89732E59BA774E78FCA177 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,6 +291,7 @@
 				B4B46F7625225344008F0155 /* Frameworks */,
 				B4B46F7725225344008F0155 /* Resources */,
 				FA8DEDDA1392A321902AC54F /* [CP] Embed Pods Frameworks */,
+				1E9207F20AC0A54042C19DE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +374,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E9207F20AC0A54042C19DE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		356F3731BD437E4B7FBA04BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +411,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C89732E59BA774E78FCA177 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7EADF9D1C418B08C0A7393E6 /* [CP] Check Pods Manifest.lock */ = {
