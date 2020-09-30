@@ -73,8 +73,25 @@ class TalksViewController: UIViewController {
 
     @objc private func composeButtonTapped() {
         let vc = NewTalkViewController()
+        vc.completion = { [weak self] result in
+            print("\(result)")
+            self?.createNewTalk(result: result)
+        }
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true)
+    }
+
+    private func createNewTalk(result: [String: String]) {
+        guard let name = result["name"],
+              let email = result["email"] else {
+            return
+        }
+
+        let vc = SingleTalkViewController(with: email)
+        vc.isNewTalk = true
+        vc.title = name
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -93,7 +110,7 @@ extension TalksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let vc = SingleTalkViewController()
+        let vc = SingleTalkViewController(with: "scdjvnj@vmjv.com")
         vc.title = "Cookie Cook"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)

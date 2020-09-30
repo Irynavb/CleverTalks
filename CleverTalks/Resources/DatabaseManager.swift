@@ -99,20 +99,100 @@ extension DatabaseManager {
     }
 }
 
-struct ChatAppUser {
-    let firstName: String
-    let lastName: String
-    let emailAddress: String
+extension DatabaseManager {
 
-    #warning("check this part of code for redunduncy")
-    var safeEmail: String {
-        var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
-        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
-        return safeEmail
+    /// creates a new talk with target user email  and first sent message
+    public func createNewTalk(with otherUserEmail: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+        guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        let safeEmail = DatabaseManager.safeEmail(emailAddress: currentEmail)
+
+        let reference = database.child("\(safeEmail)")
+        reference.observeSingleEvent(of: .value, andPreviousSiblingKeyWith: { snapshot, _  in
+
+            guard var userNode = snapshot.value as? [String: Any] else {
+                completion(false)
+                print("no results for users")
+                return
+            }
+
+            let messageDate = firstMessage.sentDate
+            let dateString = SingleTalkViewController.dateFormatter.string(from: messageDate)
+            var message = ""
+
+            switch firstMessage.kind {
+
+            case .text(let messageText):
+                message = messageText
+            case .attributedText(_):
+                break
+            case .photo(_):
+                break
+            case .video(_):
+                break
+            case .location(_):
+                break
+            case .emoji(_):
+                break
+            case .audio(_):
+                break
+            case .contact(_):
+                break
+            case .linkPreview(_):
+                break
+            case .custom(_):
+                break
+            }
+
+            let talkData: [String: Any] = [
+                "id": "talk_\(firstMessage.messageId)",
+                "other_user_email": otherUserEmail,
+                "latest_message": [
+                    "date": dateString,
+                    "message": message,
+                    "is_read": false
+                ]
+            ]
+
+            if var talks = userNode["talks"] as? [[String: Any]] {
+                // current user already has an existing talks array, so APPEND
+                talks.append(talkData)
+                userNode["talks"] = talks
+                reference.setValue(userNode, withCompletionBlock: { error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    completion(true)
+                })
+            }
+            else {
+                // the talk array does not exist, CREATE talk array and APPEND
+                userNode["talks"] = [talkData]
+
+                reference.setValue(userNode, withCompletionBlock: { error, _ in
+                    guard error == nil else {
+                        completion(false)
+                        return
+                    }
+                    completion(true)
+                })
+            }
+        })
     }
 
-    var profileImageFileName: String {
-        //iryna-gmail-com_profile_picture.png
-        "\(safeEmail)_profile_picture.png"
+    /// fetches and returns all talks for the user that passed the email
+    public func getAllTalks(for email: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+    }
+
+    /// gets all messages for a signgle existing talk
+    public func getAllMessagesForSingleTalk(with id: String, completion: @escaping (Result<String, Error>) -> Void) {
+
+    }
+    /// sends a message to an existing talk
+    public func sendMessage(to existingTalk: String, message: Message, completion: @escaping (Bool) -> Void) {
+
     }
 }
