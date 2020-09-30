@@ -22,8 +22,61 @@ class ProfileViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+
+        tableView.tableHeaderView = createTableViewHeader()
     }
 
+    func createTableViewHeader() -> UIView? {
+
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return nil
+        }
+
+        let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
+        let fileName = safeEmail + "_profile_picture.png"
+
+        let path = "images/" + fileName
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.width, height: 300))
+
+        headerView.backgroundColor = .mediumGreen
+
+        let imageView = UIImageView(frame: CGRect(x: (headerView.width - 150) / 2, y: 75, width: 150, height: 150)).then {
+            $0.contentMode = .scaleAspectFill
+            $0.layer.borderColor = UIColor.darkBrown.cgColor
+            $0.layer.borderWidth = 3
+            $0.layer.masksToBounds = true
+            $0.layer.cornerRadius = $0.width/2
+        }
+
+        headerView.addSubview(imageView)
+
+        StorageManager.shared.downloadURL(for: path, completion: { [weak self] result in
+            switch result {
+            case .success(let url):
+                self?.downloadImage(imageView: imageView, url: url)
+            case .failure(let error):
+                print("Failed to download url: \(error) ")
+            }
+
+        })
+
+
+        return headerView
+    }
+
+    func downloadImage(imageView: UIImageView, url: URL) {
+
+        URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                imageView.image = image
+            }
+        }).resume()
+    }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
