@@ -29,6 +29,8 @@
 		B4B4705B2523B10E008F0155 /* NewTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4705A2523B10E008F0155 /* NewTalkViewController.swift */; };
 		B4B470832523BCEB008F0155 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B470822523BCEB008F0155 /* StorageManager.swift */; };
 		B4B470882524E4A0008F0155 /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B470872524E4A0008F0155 /* ChatAppUser.swift */; };
+		B4B4708D25251831008F0155 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4708C25251831008F0155 /* Message.swift */; };
+		B4B4709225251899008F0155 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4709125251899008F0155 /* Sender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		B4B4705A2523B10E008F0155 /* NewTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTalkViewController.swift; sourceTree = "<group>"; };
 		B4B470822523BCEB008F0155 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B4B470872524E4A0008F0155 /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
+		B4B4708C25251831008F0155 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B4B4709125251899008F0155 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 		D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks.release.xcconfig"; path = "Target Support Files/Pods-CleverTalks/Pods-CleverTalks.release.xcconfig"; sourceTree = "<group>"; };
 		FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks-CleverTalksUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				B4B470872524E4A0008F0155 /* ChatAppUser.swift */,
+				B4B4708C25251831008F0155 /* Message.swift */,
+				B4B4709125251899008F0155 /* Sender.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */,
 				B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */,
 				B4B4705B2523B10E008F0155 /* NewTalkViewController.swift in Sources */,
+				B4B4709225251899008F0155 /* Sender.swift in Sources */,
 				B4B470832523BCEB008F0155 /* StorageManager.swift in Sources */,
 				B4B46FFC25232C5D008F0155 /* DatabaseManager.swift in Sources */,
 				B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */,
@@ -537,6 +544,7 @@
 				B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */,
 				B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */,
 				B4B46FD525230C61008F0155 /* ChangeProfileImage.swift in Sources */,
+				B4B4708D25251831008F0155 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

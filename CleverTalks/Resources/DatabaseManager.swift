@@ -145,8 +145,10 @@ extension DatabaseManager {
                 break
             }
 
-            let talkData: [String: Any] = [
-                "id": "talk_\(firstMessage.messageId)",
+            let talkId = "talk_\(firstMessage.messageId)"
+
+            let newTalkData: [String: Any] = [
+                "id": talkId,
                 "other_user_email": otherUserEmail,
                 "latest_message": [
                     "date": dateString,
@@ -157,28 +159,90 @@ extension DatabaseManager {
 
             if var talks = userNode["talks"] as? [[String: Any]] {
                 // current user already has an existing talks array, so APPEND
-                talks.append(talkData)
+                talks.append(newTalkData)
                 userNode["talks"] = talks
-                reference.setValue(userNode, withCompletionBlock: { error, _ in
+                reference.setValue(userNode, withCompletionBlock: { [weak self] error, _ in
                     guard error == nil else {
                         completion(false)
                         return
                     }
-                    completion(true)
+                    self?.finishCreatingSingleTalk(talkId: talkId, firstMessage: firstMessage, completion: completion)
                 })
             }
             else {
                 // the talk array does not exist, CREATE talk array and APPEND
-                userNode["talks"] = [talkData]
+                userNode["talks"] = [newTalkData]
 
-                reference.setValue(userNode, withCompletionBlock: { error, _ in
+                reference.setValue(userNode, withCompletionBlock: { [weak self] error, _ in
                     guard error == nil else {
                         completion(false)
                         return
                     }
-                    completion(true)
+                    self?.finishCreatingSingleTalk(talkId: talkId, firstMessage: firstMessage, completion: completion)
                 })
             }
+        })
+    }
+
+    private func finishCreatingSingleTalk(talkId: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+
+        let messageDate = firstMessage.sentDate
+        let dateString = SingleTalkViewController.dateFormatter.string(from: messageDate)
+
+        var message = ""
+
+        switch firstMessage.kind {
+
+        case .text(let messageText):
+            message = messageText
+        case .attributedText(_):
+            break
+        case .photo(_):
+            break
+        case .video(_):
+            break
+        case .location(_):
+            break
+        case .emoji(_):
+            break
+        case .audio(_):
+            break
+        case .contact(_):
+            break
+        case .linkPreview(_):
+            break
+        case .custom(_):
+            break
+        }
+
+        guard let userEmail = UserDefaults.standard.value(forKey: "email") as? String else {
+            completion(false)
+            return
+        }
+
+        let currentUserEmail = DatabaseManager.safeEmail(emailAddress: userEmail)
+
+        let collectionMessage: [String: Any] = [
+            "id": firstMessage.messageId,
+            "type": firstMessage.kind.messageKindString,
+            "content": message,
+            "date": dateString,
+            "sender_email": currentUserEmail,
+            "is_read": false
+        ]
+
+        let value: [String: Any] = [
+            "messages": [
+                collectionMessage
+            ]
+        ]
+
+        database.child("\(talkId)").setValue(value, withCompletionBlock: { error, _ in
+            guard error == nil else {
+                completion(false)
+                return
+            }
+            completion(true)
         })
     }
 
