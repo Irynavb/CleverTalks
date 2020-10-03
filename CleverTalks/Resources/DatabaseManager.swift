@@ -102,7 +102,7 @@ extension DatabaseManager {
 extension DatabaseManager {
 
     /// creates a new talk with target user email  and first sent message
-    public func createNewTalk(with otherUserEmail: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+    public func createNewTalk(with otherUserEmail: String, name: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
         guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String else {
             return
         }
@@ -150,6 +150,7 @@ extension DatabaseManager {
             let newTalkData: [String: Any] = [
                 "id": talkId,
                 "other_user_email": otherUserEmail,
+                "name": name,
                 "latest_message": [
                     "date": dateString,
                     "message": message,
@@ -166,7 +167,7 @@ extension DatabaseManager {
                         completion(false)
                         return
                     }
-                    self?.finishCreatingSingleTalk(talkId: talkId, firstMessage: firstMessage, completion: completion)
+                    self?.finishCreatingSingleTalk(name: name, talkId: talkId, firstMessage: firstMessage, completion: completion)
                 })
             }
             else {
@@ -178,13 +179,13 @@ extension DatabaseManager {
                         completion(false)
                         return
                     }
-                    self?.finishCreatingSingleTalk(talkId: talkId, firstMessage: firstMessage, completion: completion)
+                    self?.finishCreatingSingleTalk(name: name, talkId: talkId, firstMessage: firstMessage, completion: completion)
                 })
             }
         })
     }
 
-    private func finishCreatingSingleTalk(talkId: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+    private func finishCreatingSingleTalk(name: String, talkId: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
 
         let messageDate = firstMessage.sentDate
         let dateString = SingleTalkViewController.dateFormatter.string(from: messageDate)
@@ -247,7 +248,29 @@ extension DatabaseManager {
     }
 
     /// fetches and returns all talks for the user that passed the email
-    public func getAllTalks(for email: String, completion: @escaping (Result<String, Error>) -> Void) {
+    public func getAllTalks(for email: String, completion: @escaping (Result<[Talk], Error>) -> Void) {
+        database.child("\(email)/talks").observe(.value, with: { snapshot in
+            guard let value = snapshot.value as? [[String: Any]] else {
+                completion(.failure(DatabaseError.fetchFailure))
+                return
+            }
+            let talks: [Talk] = value.compactMap({ dictionary in
+                guard let talkId = dictionary["id"] as? String,
+                      let name = dictionary["name"] as? String,
+                      let otherUserEmail = dictionary["other_user_email"] as? String,
+                      let latestMessage = dictionary["latest_message"] as? [String: Any],
+                      let date = latestMessage["date"] as? String,
+                      let message = latestMessage["message"] as? String,
+                      let isRead = latestMessage["is_read"] as? Bool else {
+                    return nil
+                }
+
+                let latestMessageObject = LatestMessage(date: date, text: message, isRead: isRead)
+
+                return Talk(id: talkId, name: name, otherUserEmail: otherUserEmail, latestMessage: latestMessageObject)
+            })
+            completion(.success(talks))
+        })
 
     }
 

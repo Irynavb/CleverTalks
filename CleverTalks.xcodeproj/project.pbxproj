@@ -10,6 +10,8 @@
 		51E2747F22E91521B87CAB3A /* Pods_CleverTalksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */; };
 		5EA7114934DFE47774CF3287 /* Pods_CleverTalks_CleverTalksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */; };
 		96CCAC3C2F6C782133F52433 /* Pods_CleverTalks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */; };
+		B45402A32528722200CDFFD7 /* SingleTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */; };
+		B45402A8252878EA00CDFFD7 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45402A7252878EA00CDFFD7 /* Talk.swift */; };
 		B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5B25225344008F0155 /* AppDelegate.swift */; };
 		B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5D25225344008F0155 /* SceneDelegate.swift */; };
 		B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5F25225344008F0155 /* TalksViewController.swift */; };
@@ -57,6 +59,8 @@
 		3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalksTests.release.xcconfig"; path = "Target Support Files/Pods-CleverTalksTests/Pods-CleverTalksTests.release.xcconfig"; sourceTree = "<group>"; };
 		66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks-CleverTalksUITests.release.xcconfig"; path = "Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalks_CleverTalksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTalkTableViewCell.swift; sourceTree = "<group>"; };
+		B45402A7252878EA00CDFFD7 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		B4B46F5825225344008F0155 /* CleverTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B46F5B25225344008F0155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B46F5D25225344008F0155 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 			children = (
 				B4B46FBA25225D1D008F0155 /* Storyboards */,
 				B4B46F6425225344008F0155 /* Assets.xcassets */,
+				B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				B4B470872524E4A0008F0155 /* ChatAppUser.swift */,
 				B4B4708C25251831008F0155 /* Message.swift */,
 				B4B4709125251899008F0155 /* Sender.swift */,
+				B45402A7252878EA00CDFFD7 /* Talk.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -539,11 +545,13 @@
 				B4B46FFC25232C5D008F0155 /* DatabaseManager.swift in Sources */,
 				B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */,
 				B4B46FBD25225D4E008F0155 /* Appearance.swift in Sources */,
+				B45402A32528722200CDFFD7 /* SingleTalkTableViewCell.swift in Sources */,
 				B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */,
 				B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */,
 				B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */,
 				B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */,
 				B4B46FD525230C61008F0155 /* ChangeProfileImage.swift in Sources */,
+				B45402A8252878EA00CDFFD7 /* Talk.swift in Sources */,
 				B4B4708D25251831008F0155 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

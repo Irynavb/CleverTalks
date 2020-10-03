@@ -89,7 +89,7 @@ extension SingleTalkViewController: InputBarAccessoryViewDelegate {
             // create convo in database
             let message = Message(sender: selfSender, messageId: messageId, sentDate: Date(), kind: .text(text))
 
-            DatabaseManager.shared.createNewTalk(with: otherUserEmail, firstMessage: message, completion: { [weak self] success in
+            DatabaseManager.shared.createNewTalk(with: otherUserEmail, name: self.title ?? "User", firstMessage: message, completion: { [weak self] success in
                 if success {
                     print("message sent")
                 }
