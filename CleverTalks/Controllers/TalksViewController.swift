@@ -33,7 +33,7 @@ class TalksViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeButtonTapped))
-        view.backgroundColor = .backgroundLightGreen
+//        view.backgroundColor = .backgroundLightGreen
 
         view.addSubview(tableView)
         view.addSubview(noTalksLabel)
@@ -114,7 +114,7 @@ class TalksViewController: UIViewController {
             return
         }
 
-        let vc = SingleTalkViewController(with: email)
+        let vc = SingleTalkViewController(with: email, id: nil)
         vc.isNewTalk = true
         vc.title = name
         vc.navigationItem.largeTitleDisplayMode = .never
@@ -140,7 +140,7 @@ extension TalksViewController: UITableViewDelegate, UITableViewDataSource {
 
         let model = talks[indexPath.row]
 
-        let vc = SingleTalkViewController(with: model.otherUserEmail)
+        let vc = SingleTalkViewController(with: model.otherUserEmail, id: model.id)
         vc.title = model.name
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)

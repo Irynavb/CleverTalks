@@ -16,11 +16,9 @@ class SignInViewController: UIViewController {
 
     private let spinner = JGProgressHUD(style: .dark)
 
-    private let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.clipsToBounds = true
-        return scrollView
-    }()
+    private let scrollView = UIScrollView().then {
+        $0.clipsToBounds = true
+    }
 
     private let imageView = UIImageView().then {
         $0.image = #imageLiteral(resourceName: "SmallLogoImage")
@@ -157,7 +155,7 @@ class SignInViewController: UIViewController {
         guard let email = emailField.text,
               let password = passwordField.text,
               !email.isEmpty, !password.isEmpty, password.count >= 8 else {
-                alertUserSignInError()
+            alertUserSignInError()
             return
         }
 
@@ -178,6 +176,22 @@ class SignInViewController: UIViewController {
             }
 
             let user = result.user
+
+            let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
+            DatabaseManager.shared.getDataFor(path: safeEmail, completion: { result in
+                switch result {
+                case .success(let data):
+                    guard let userData = data as? [String: Any],
+                          let firstName = userData["first_name"] as? String,
+                          let lastName = userData["last_name"] as? String else {
+                        return
+                    }
+                    UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
+
+                case .failure(let error):
+                    print("Failed to read data with error \(error)")
+                }
+            })
 
             UserDefaults.standard.set(email, forKey: "email")
             print("Logged In User: \(user)")
@@ -225,6 +239,8 @@ extension SignInViewController: UITextFieldDelegate {
 }
 
 extension SignInViewController: LoginButtonDelegate {
+
+
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         guard let token = result?.token?.tokenString else {
             print("User could not sign in with facebook")
@@ -255,6 +271,7 @@ extension SignInViewController: LoginButtonDelegate {
             }
 
             UserDefaults.standard.set(email, forKey: "email")
+            UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
 
             DatabaseManager.shared.userExists(with: email, completion: { exists in
                 if !exists {

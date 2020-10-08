@@ -21,18 +21,26 @@ class SingleTalkViewController: MessagesViewController, MessagesDataSource, Mess
 
     public let otherUserEmail: String
 
+    private let talkId: String?
+
     private var messages = [Message]()
 
     private var selfSender: Sender? {
         guard let email = UserDefaults.standard.value(forKey: "email")as? String else {
             return nil
         }
-        return Sender(photoURL: "", senderId: email, displayName: "Cookie Cook-y")
+        let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
+
+        return Sender(photoURL: "", senderId: safeEmail, displayName: "Me")
     }
 
-    init(with email: String) {
+    init(with email: String, id: String?) {
+
+        self.talkId = id
         self.otherUserEmail = email
+
         super.init(nibName: nil, bundle: nil)
+
     }
 
     required init?(coder: NSCoder) {
@@ -53,6 +61,32 @@ class SingleTalkViewController: MessagesViewController, MessagesDataSource, Mess
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         messageInputBar.inputTextView.becomeFirstResponder()
+        if let talkId = talkId {
+            listenForMessages(id: talkId, shouldScrollToBottom: true)
+        }
+    }
+
+    private func listenForMessages(id: String, shouldScrollToBottom: Bool) {
+        DatabaseManager.shared.getAllMessagesForSingleTalk(with: id, completion: { [weak self] result in
+            switch result {
+            case .success(let messages):
+                guard !messages.isEmpty else {
+                    return
+                }
+                self?.messages = messages
+
+                DispatchQueue.main.async {
+                    self?.messagesCollectionView.reloadDataAndKeepOffset()
+                    if shouldScrollToBottom {
+                        self?.messagesCollectionView.scrollToBottom()
+                    }
+                }
+            case .failure(let error):
+                print("failed to get messages: \(error)")
+            }
+
+        })
+
     }
 
     func currentSender() -> SenderType {
@@ -60,7 +94,7 @@ class SingleTalkViewController: MessagesViewController, MessagesDataSource, Mess
             return sender
         }
         fatalError("SelfSender is nil, email needs to be cached")
-        return Sender(photoURL: "", senderId: "35", displayName: "")
+//        return Sender(photoURL: "", senderId: "35", displayName: "")
     }
 
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
@@ -83,15 +117,16 @@ extension SingleTalkViewController: InputBarAccessoryViewDelegate {
         }
 
         print("sending: \(text)")
-        // send messages
+
+        let message = Message(sender: selfSender, messageId: messageId, sentDate: Date(), kind: .text(text))
 
         if isNewTalk {
             // create convo in database
-            let message = Message(sender: selfSender, messageId: messageId, sentDate: Date(), kind: .text(text))
 
             DatabaseManager.shared.createNewTalk(with: otherUserEmail, name: self.title ?? "User", firstMessage: message, completion: { [weak self] success in
                 if success {
                     print("message sent")
+                    self?.isNewTalk = false
                 }
                 else {
                     print("failed to send")
@@ -100,7 +135,18 @@ extension SingleTalkViewController: InputBarAccessoryViewDelegate {
             })
         }
         else {
+            guard let talkId = talkId, let name = self.title else {
+                return
+            }
             // append to existing talk data
+            DatabaseManager.shared.sendMessage(to: talkId, otherUserEmail: otherUserEmail, name: name, newMessage: message, completion: { success in
+                if success {
+                    print("message sent")
+                }
+                else {
+                    print("failed to send")
+                }
+            })
         }
     }
 
