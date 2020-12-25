@@ -2,4 +2,4 @@
 
 iOS Swift application to share ideas in a very customizable chat, written in Swift and Firebase.
 
-Test version, development stage. Expected release is January 2021
+This is a test version, development stage. Expected release is January 2021
