@@ -1,6 +1,6 @@
 ## CleverTalks
 
-<img src="images/icon.png" alt="Icon of the project application">
+<img src="images/Icon.png" alt="Icon of the project application" width="240">
 
 This is an iOS application written in Swift using programmatic approach to building layout. 
 
