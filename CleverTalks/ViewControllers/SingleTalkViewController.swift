@@ -57,7 +57,7 @@ final class SingleTalkViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .mediumGreen
+        view.backgroundColor = .systemBackground
 
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self

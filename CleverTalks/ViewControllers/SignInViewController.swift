@@ -24,9 +24,9 @@ class SignInViewController: UIViewController {
         $0.image = #imageLiteral(resourceName: "Logo")
         $0.contentMode = .scaleAspectFit
         $0.layer.masksToBounds = true
-        $0.layer.borderWidth = 2.5
-        $0.layer.borderColor = UIColor.darkBrown.cgColor
-        $0.layer.opacity = 0.65    }
+        $0.layer.borderWidth = 1.5
+        $0.layer.borderColor = UIColor.systemGreen.cgColor
+        $0.layer.opacity = 0.8    }
 
     private let emailField = UITextField().then {
         $0.autocapitalizationType = .none
@@ -121,10 +121,10 @@ class SignInViewController: UIViewController {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
         let size = scrollView.width / 3
-        imageView.frame = CGRect(x: (scrollView.width - size) / 2,
-                                 y: 30,
-                                 width: size,
-                                 height: size)
+        imageView.frame = CGRect(x: (scrollView.width - (size/1.2)) / 2,
+                                 y: 45,
+                                 width: size/1.2,
+                                 height: size/1.2)
         imageView.layer.cornerRadius = imageView.width / 5.0
         emailField.frame = CGRect(x: 30,
                                   y: imageView.bottom + 45,

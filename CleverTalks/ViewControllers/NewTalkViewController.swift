@@ -48,7 +48,7 @@ class NewTalkViewController: UIViewController {
 
         searchBar.delegate = self
 
-        view.backgroundColor = .backgroundLightGreen
+        view.backgroundColor = .systemBackground
 
         navigationController?.navigationBar.topItem?.titleView = searchBar
 
