@@ -11,7 +11,7 @@ import JGProgressHUD
 
 class TalksViewController: UIViewController {
 
-    private let spinner = JGProgressHUD(style: .dark)
+    private let spinner = JGProgressHUD(style: .light)
 
     private var talks = [Talk]()
 

@@ -14,7 +14,7 @@ import JGProgressHUD
 
 class SignInViewController: UIViewController {
 
-    private let spinner = JGProgressHUD(style: .dark)
+    private let spinner = JGProgressHUD(style: .light)
 
     private let scrollView = UIScrollView().then {
         $0.clipsToBounds = true
