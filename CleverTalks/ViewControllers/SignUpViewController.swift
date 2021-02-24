@@ -93,7 +93,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Create Account"
-        view.backgroundColor = .backgroundLightGreen
+        view.backgroundColor = .systemBackground
 
 
         signUpButton.addTarget(self, action: #selector(didPressSignUp), for: .touchUpInside)
@@ -257,7 +257,7 @@ class SignUpViewController: UIViewController {
     @objc private func signUpPressed() {
         let vc = SignUpViewController()
         vc.title = "Create Account"
-        vc.view.backgroundColor = .backgroundLightGreen
+        vc.view.backgroundColor = .systemBackground
         navigationController?.pushViewController(vc, animated: true)
     }
 

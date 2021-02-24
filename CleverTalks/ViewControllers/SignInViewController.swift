@@ -21,12 +21,12 @@ class SignInViewController: UIViewController {
     }
 
     private let imageView = UIImageView().then {
-        $0.image = #imageLiteral(resourceName: "SmallLogoImage")
+        $0.image = #imageLiteral(resourceName: "Logo")
         $0.contentMode = .scaleAspectFit
         $0.layer.masksToBounds = true
-        $0.layer.borderWidth = 2
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-    }
+        $0.layer.borderWidth = 2.5
+        $0.layer.borderColor = UIColor.darkBrown.cgColor
+        $0.layer.opacity = 0.65    }
 
     private let emailField = UITextField().then {
         $0.autocapitalizationType = .none
@@ -87,10 +87,10 @@ class SignInViewController: UIViewController {
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
 
-        title = "Sign In"
-        view.backgroundColor = .backgroundLightGreen
+        title = "Welcome Back!"
+        view.backgroundColor = .systemBackground
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(signUpPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .plain, target: self, action: #selector(signUpPressed))
 
         signInButton.addTarget(self, action: #selector(signInPressed), for: .touchUpInside)
 
@@ -122,12 +122,12 @@ class SignInViewController: UIViewController {
         scrollView.frame = view.bounds
         let size = scrollView.width / 3
         imageView.frame = CGRect(x: (scrollView.width - size) / 2,
-                                 y: 50,
+                                 y: 30,
                                  width: size,
                                  height: size)
-        imageView.layer.cornerRadius = imageView.width / 2.0
+        imageView.layer.cornerRadius = imageView.width / 5.0
         emailField.frame = CGRect(x: 30,
-                                  y: imageView.bottom + 30,
+                                  y: imageView.bottom + 45,
                                   width: scrollView.width - 60,
                                   height: 52)
 
@@ -218,7 +218,7 @@ class SignInViewController: UIViewController {
     @objc private func signUpPressed() {
         let vc = SignUpViewController()
         vc.title = "Create Account"
-        vc.view.backgroundColor = .backgroundLightGreen
+        vc.view.backgroundColor = .systemBackground
         navigationController?.pushViewController(vc, animated: true)
     }
 
