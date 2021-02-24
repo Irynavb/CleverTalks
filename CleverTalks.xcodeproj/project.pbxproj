@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51E2747F22E91521B87CAB3A /* Pods_CleverTalksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */; };
+		5EA7114934DFE47774CF3287 /* Pods_CleverTalks_CleverTalksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */; };
+		96CCAC3C2F6C782133F52433 /* Pods_CleverTalks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */; };
+		B41AB19225E55C9800DD8B0C /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB19125E55C9800DD8B0C /* Media.swift */; };
+		B41AB19A25E55CDB00DD8B0C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB19925E55CDB00DD8B0C /* Location.swift */; };
+		B41AB19F25E55DCA00DD8B0C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB19E25E55DCA00DD8B0C /* SearchResult.swift */; };
+		B41AB1A425E55E8500DD8B0C /* ProfileViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1A325E55E8500DD8B0C /* ProfileViewModelType.swift */; };
+		B41AB1A925E55FAA00DD8B0C /* NewTalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1A825E55FAA00DD8B0C /* NewTalkCell.swift */; };
+		B41AB1AE25E5837900DD8B0C /* VerifyUserEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1AD25E5837900DD8B0C /* VerifyUserEmail.swift */; };
+		B41AB1B325E586BB00DD8B0C /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1B225E586BB00DD8B0C /* DatabaseError.swift */; };
+		B41AB1BF25E5884D00DD8B0C /* AddMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1BE25E5884D00DD8B0C /* AddMessage.swift */; };
+		B41AB1D025E59BE700DD8B0C /* DeleteTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1CF25E59BE700DD8B0C /* DeleteTalk.swift */; };
+		B41AB1D525E59EE400DD8B0C /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1D425E59EE400DD8B0C /* StorageError.swift */; };
+		B41AB1DA25E5A1BC00DD8B0C /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1D925E5A1BC00DD8B0C /* PhotoViewerViewController.swift */; };
+		B41AB1E525E5A2F600DD8B0C /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1E425E5A2F600DD8B0C /* LocationPickerViewController.swift */; };
+		B41AB1EB25E5FEF200DD8B0C /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1EA25E5FEF200DD8B0C /* ProfileTableViewCell.swift */; };
+		B45402A32528722200CDFFD7 /* SingleTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */; };
+		B45402A8252878EA00CDFFD7 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45402A7252878EA00CDFFD7 /* Talk.swift */; };
+		B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5B25225344008F0155 /* AppDelegate.swift */; };
+		B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5D25225344008F0155 /* SceneDelegate.swift */; };
+		B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5F25225344008F0155 /* TalksViewController.swift */; };
+		B4B46F6325225344008F0155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B46F6125225344008F0155 /* Main.storyboard */; };
+		B4B46F6525225344008F0155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B46F6425225344008F0155 /* Assets.xcassets */; };
+		B4B46F6825225344008F0155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B46F6625225344008F0155 /* LaunchScreen.storyboard */; };
+		B4B46F7325225344008F0155 /* CleverTalksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F7225225344008F0155 /* CleverTalksTests.swift */; };
+		B4B46F7E25225344008F0155 /* CleverTalksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F7D25225344008F0155 /* CleverTalksUITests.swift */; };
+		B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9525225412008F0155 /* SignUpViewController.swift */; };
+		B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9A25225423008F0155 /* SignInViewController.swift */; };
+		B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */; };
+		B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FA42522543D008F0155 /* ProfileViewController.swift */; };
+		B4B46FBD25225D4E008F0155 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FBC25225D4E008F0155 /* Appearance.swift */; };
+		B4B46FD525230C61008F0155 /* ChangeProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FD425230C61008F0155 /* ChangeProfileImage.swift */; };
+		B4B46FF7252317AD008F0155 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4B46FF6252317AD008F0155 /* GoogleService-Info.plist */; };
+		B4B46FFC25232C5D008F0155 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46FFB25232C5D008F0155 /* DatabaseManager.swift */; };
+		B4B4705B2523B10E008F0155 /* NewTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4705A2523B10E008F0155 /* NewTalkViewController.swift */; };
+		B4B470832523BCEB008F0155 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B470822523BCEB008F0155 /* StorageManager.swift */; };
+		B4B470882524E4A0008F0155 /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B470872524E4A0008F0155 /* ChatAppUser.swift */; };
+		B4B4708D25251831008F0155 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4708C25251831008F0155 /* Message.swift */; };
+		B4B4709225251899008F0155 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4709125251899008F0155 /* Sender.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4B46F6F25225344008F0155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B46F5025225344008F0155 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B46F5725225344008F0155;
+			remoteInfo = CleverTalks;
+		};
+		B4B46F7A25225344008F0155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B46F5025225344008F0155 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B46F5725225344008F0155;
+			remoteInfo = CleverTalks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		015CDF84A94E8B4F5D88EB63 /* Pods-CleverTalksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalksTests.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalksTests/Pods-CleverTalksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		048D74616D08474F5BB095B2 /* Pods-CleverTalks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalks/Pods-CleverTalks.debug.xcconfig"; sourceTree = "<group>"; };
+		2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalksTests.release.xcconfig"; path = "Target Support Files/Pods-CleverTalksTests/Pods-CleverTalksTests.release.xcconfig"; sourceTree = "<group>"; };
+		66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks-CleverTalksUITests.release.xcconfig"; path = "Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalks_CleverTalksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41AB19125E55C9800DD8B0C /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		B41AB19925E55CDB00DD8B0C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B41AB19E25E55DCA00DD8B0C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		B41AB1A325E55E8500DD8B0C /* ProfileViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelType.swift; sourceTree = "<group>"; };
+		B41AB1A825E55FAA00DD8B0C /* NewTalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTalkCell.swift; sourceTree = "<group>"; };
+		B41AB1AD25E5837900DD8B0C /* VerifyUserEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUserEmail.swift; sourceTree = "<group>"; };
+		B41AB1B225E586BB00DD8B0C /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
+		B41AB1BE25E5884D00DD8B0C /* AddMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessage.swift; sourceTree = "<group>"; };
+		B41AB1CF25E59BE700DD8B0C /* DeleteTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTalk.swift; sourceTree = "<group>"; };
+		B41AB1D425E59EE400DD8B0C /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
+		B41AB1D925E5A1BC00DD8B0C /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		B41AB1E425E5A2F600DD8B0C /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		B41AB1EA25E5FEF200DD8B0C /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTalkTableViewCell.swift; sourceTree = "<group>"; };
+		B45402A7252878EA00CDFFD7 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		B4B46F5825225344008F0155 /* CleverTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B46F5B25225344008F0155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4B46F5D25225344008F0155 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B4B46F5F25225344008F0155 /* TalksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksViewController.swift; sourceTree = "<group>"; };
+		B4B46F6225225344008F0155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4B46F6425225344008F0155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4B46F6725225344008F0155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4B46F6925225344008F0155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B46F6E25225344008F0155 /* CleverTalksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleverTalksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B46F7225225344008F0155 /* CleverTalksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverTalksTests.swift; sourceTree = "<group>"; };
+		B4B46F7425225344008F0155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B46F7925225344008F0155 /* CleverTalksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleverTalksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B46F7D25225344008F0155 /* CleverTalksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleverTalksUITests.swift; sourceTree = "<group>"; };
+		B4B46F7F25225344008F0155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B46F9525225412008F0155 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B4B46F9A25225423008F0155 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTalkViewController.swift; sourceTree = "<group>"; };
+		B4B46FA42522543D008F0155 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B4B46FBC25225D4E008F0155 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		B4B46FD425230C61008F0155 /* ChangeProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileImage.swift; sourceTree = "<group>"; };
+		B4B46FF6252317AD008F0155 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4B46FFB25232C5D008F0155 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		B4B4705A2523B10E008F0155 /* NewTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTalkViewController.swift; sourceTree = "<group>"; };
+		B4B470822523BCEB008F0155 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B4B470872524E4A0008F0155 /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
+		B4B4708C25251831008F0155 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B4B4709125251899008F0155 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
+		D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleverTalks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks.release.xcconfig"; path = "Target Support Files/Pods-CleverTalks/Pods-CleverTalks.release.xcconfig"; sourceTree = "<group>"; };
+		FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleverTalks-CleverTalksUITests.debug.xcconfig"; path = "Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4B46F5525225344008F0155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CCAC3C2F6C782133F52433 /* Pods_CleverTalks.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B46F6B25225344008F0155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51E2747F22E91521B87CAB3A /* Pods_CleverTalksTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B46F7625225344008F0155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA7114934DFE47774CF3287 /* Pods_CleverTalks_CleverTalksUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B33AFB40F0D970A9598A156 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				048D74616D08474F5BB095B2 /* Pods-CleverTalks.debug.xcconfig */,
+				D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */,
+				FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */,
+				66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */,
+				015CDF84A94E8B4F5D88EB63 /* Pods-CleverTalksTests.debug.xcconfig */,
+				3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B41AB1B725E5877000DD8B0C /* DatabaseManager+EXT */ = {
+			isa = PBXGroup;
+			children = (
+				B41AB1AD25E5837900DD8B0C /* VerifyUserEmail.swift */,
+				B41AB1B225E586BB00DD8B0C /* DatabaseError.swift */,
+				B41AB1BE25E5884D00DD8B0C /* AddMessage.swift */,
+				B41AB1CF25E59BE700DD8B0C /* DeleteTalk.swift */,
+			);
+			path = "DatabaseManager+EXT";
+			sourceTree = "<group>";
+		};
+		B41AB1E925E5FECA00DD8B0C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */,
+				B41AB1A825E55FAA00DD8B0C /* NewTalkCell.swift */,
+				B41AB1EA25E5FEF200DD8B0C /* ProfileTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4B46F4F25225344008F0155 = {
+			isa = PBXGroup;
+			children = (
+				B4B46F5A25225344008F0155 /* CleverTalks */,
+				B4B46F7125225344008F0155 /* CleverTalksTests */,
+				B4B46F7C25225344008F0155 /* CleverTalksUITests */,
+				B4B46F5925225344008F0155 /* Products */,
+				6B33AFB40F0D970A9598A156 /* Pods */,
+				E39E94BAD041ED5883B75E0F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4B46F5925225344008F0155 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F5825225344008F0155 /* CleverTalks.app */,
+				B4B46F6E25225344008F0155 /* CleverTalksTests.xctest */,
+				B4B46F7925225344008F0155 /* CleverTalksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4B46F5A25225344008F0155 /* CleverTalks */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46FF6252317AD008F0155 /* GoogleService-Info.plist */,
+				B4B46FA925225446008F0155 /* Resources */,
+				B4B46FAB25225484008F0155 /* Models */,
+				B4B46FAA25225455008F0155 /* Views */,
+				B4B46F8E25225383008F0155 /* ViewControllers */,
+				B4B46F6925225344008F0155 /* Info.plist */,
+			);
+			path = CleverTalks;
+			sourceTree = "<group>";
+		};
+		B4B46F7125225344008F0155 /* CleverTalksTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F7225225344008F0155 /* CleverTalksTests.swift */,
+				B4B46F7425225344008F0155 /* Info.plist */,
+			);
+			path = CleverTalksTests;
+			sourceTree = "<group>";
+		};
+		B4B46F7C25225344008F0155 /* CleverTalksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F7D25225344008F0155 /* CleverTalksUITests.swift */,
+				B4B46F7F25225344008F0155 /* Info.plist */,
+			);
+			path = CleverTalksUITests;
+			sourceTree = "<group>";
+		};
+		B4B46F8E25225383008F0155 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F5F25225344008F0155 /* TalksViewController.swift */,
+				B4B46F9525225412008F0155 /* SignUpViewController.swift */,
+				B4B46F9A25225423008F0155 /* SignInViewController.swift */,
+				B4B46F9F25225432008F0155 /* SingleTalkViewController.swift */,
+				B4B46FA42522543D008F0155 /* ProfileViewController.swift */,
+				B4B4705A2523B10E008F0155 /* NewTalkViewController.swift */,
+				B41AB1D925E5A1BC00DD8B0C /* PhotoViewerViewController.swift */,
+				B41AB1E425E5A2F600DD8B0C /* LocationPickerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4B46FA925225446008F0155 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F5D25225344008F0155 /* SceneDelegate.swift */,
+				B4B46F5B25225344008F0155 /* AppDelegate.swift */,
+				B4B46FFB25232C5D008F0155 /* DatabaseManager.swift */,
+				B4B470822523BCEB008F0155 /* StorageManager.swift */,
+				B4B46FD325230C0B008F0155 /* Extensions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4B46FAA25225455008F0155 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B41AB1E925E5FECA00DD8B0C /* Cells */,
+				B4B46FBA25225D1D008F0155 /* Storyboards */,
+				B4B46F6425225344008F0155 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4B46FAB25225484008F0155 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4B470872524E4A0008F0155 /* ChatAppUser.swift */,
+				B4B4708C25251831008F0155 /* Message.swift */,
+				B4B4709125251899008F0155 /* Sender.swift */,
+				B45402A7252878EA00CDFFD7 /* Talk.swift */,
+				B41AB19125E55C9800DD8B0C /* Media.swift */,
+				B41AB19925E55CDB00DD8B0C /* Location.swift */,
+				B41AB19E25E55DCA00DD8B0C /* SearchResult.swift */,
+				B41AB1A325E55E8500DD8B0C /* ProfileViewModelType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B4B46FBA25225D1D008F0155 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B4B46F6125225344008F0155 /* Main.storyboard */,
+				B4B46F6625225344008F0155 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B4B46FD325230C0B008F0155 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B41AB1B725E5877000DD8B0C /* DatabaseManager+EXT */,
+				B4B46FBC25225D4E008F0155 /* Appearance.swift */,
+				B4B46FD425230C61008F0155 /* ChangeProfileImage.swift */,
+				B41AB1D425E59EE400DD8B0C /* StorageError.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E39E94BAD041ED5883B75E0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9CA4EAEFC2C2D879F157D /* Pods_CleverTalks.framework */,
+				85E6680AEBEA21730EFDA8FE /* Pods_CleverTalks_CleverTalksUITests.framework */,
+				2135197A6F919E5087BE715A /* Pods_CleverTalksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4B46F5725225344008F0155 /* CleverTalks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4B46F8225225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalks" */;
+			buildPhases = (
+				AF928694AC62DB62C26BB37B /* [CP] Check Pods Manifest.lock */,
+				B4B46F5425225344008F0155 /* Sources */,
+				B4B46F5525225344008F0155 /* Frameworks */,
+				B4B46F5625225344008F0155 /* Resources */,
+				8E29FA40F07E7BB8BA539998 /* [CP] Embed Pods Frameworks */,
+				4C89732E59BA774E78FCA177 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CleverTalks;
+			productName = CleverTalks;
+			productReference = B4B46F5825225344008F0155 /* CleverTalks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4B46F6D25225344008F0155 /* CleverTalksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4B46F8525225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalksTests" */;
+			buildPhases = (
+				356F3731BD437E4B7FBA04BA /* [CP] Check Pods Manifest.lock */,
+				B4B46F6A25225344008F0155 /* Sources */,
+				B4B46F6B25225344008F0155 /* Frameworks */,
+				B4B46F6C25225344008F0155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4B46F7025225344008F0155 /* PBXTargetDependency */,
+			);
+			name = CleverTalksTests;
+			productName = CleverTalksTests;
+			productReference = B4B46F6E25225344008F0155 /* CleverTalksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4B46F7825225344008F0155 /* CleverTalksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4B46F8825225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalksUITests" */;
+			buildPhases = (
+				7EADF9D1C418B08C0A7393E6 /* [CP] Check Pods Manifest.lock */,
+				B4B46F7525225344008F0155 /* Sources */,
+				B4B46F7625225344008F0155 /* Frameworks */,
+				B4B46F7725225344008F0155 /* Resources */,
+				FA8DEDDA1392A321902AC54F /* [CP] Embed Pods Frameworks */,
+				1E9207F20AC0A54042C19DE7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4B46F7B25225344008F0155 /* PBXTargetDependency */,
+			);
+			name = CleverTalksUITests;
+			productName = CleverTalksUITests;
+			productReference = B4B46F7925225344008F0155 /* CleverTalksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4B46F5025225344008F0155 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					B4B46F5725225344008F0155 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					B4B46F6D25225344008F0155 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = B4B46F5725225344008F0155;
+					};
+					B4B46F7825225344008F0155 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = B4B46F5725225344008F0155;
+					};
+				};
+			};
+			buildConfigurationList = B4B46F5325225344008F0155 /* Build configuration list for PBXProject "CleverTalks" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4B46F4F25225344008F0155;
+			productRefGroup = B4B46F5925225344008F0155 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4B46F5725225344008F0155 /* CleverTalks */,
+				B4B46F6D25225344008F0155 /* CleverTalksTests */,
+				B4B46F7825225344008F0155 /* CleverTalksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4B46F5625225344008F0155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B46F6825225344008F0155 /* LaunchScreen.storyboard in Resources */,
+				B4B46FF7252317AD008F0155 /* GoogleService-Info.plist in Resources */,
+				B4B46F6525225344008F0155 /* Assets.xcassets in Resources */,
+				B4B46F6325225344008F0155 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B46F6C25225344008F0155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B46F7725225344008F0155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E9207F20AC0A54042C19DE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		356F3731BD437E4B7FBA04BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleverTalksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C89732E59BA774E78FCA177 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EADF9D1C418B08C0A7393E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleverTalks-CleverTalksUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E29FA40F07E7BB8BA539998 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks/Pods-CleverTalks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF928694AC62DB62C26BB37B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CleverTalks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA8DEDDA1392A321902AC54F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleverTalks-CleverTalksUITests/Pods-CleverTalks-CleverTalksUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4B46F5425225344008F0155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B470882524E4A0008F0155 /* ChatAppUser.swift in Sources */,
+				B4B46F6025225344008F0155 /* TalksViewController.swift in Sources */,
+				B41AB1E525E5A2F600DD8B0C /* LocationPickerViewController.swift in Sources */,
+				B41AB1EB25E5FEF200DD8B0C /* ProfileTableViewCell.swift in Sources */,
+				B41AB19F25E55DCA00DD8B0C /* SearchResult.swift in Sources */,
+				B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */,
+				B4B4705B2523B10E008F0155 /* NewTalkViewController.swift in Sources */,
+				B41AB1B325E586BB00DD8B0C /* DatabaseError.swift in Sources */,
+				B4B4709225251899008F0155 /* Sender.swift in Sources */,
+				B41AB1A925E55FAA00DD8B0C /* NewTalkCell.swift in Sources */,
+				B41AB1A425E55E8500DD8B0C /* ProfileViewModelType.swift in Sources */,
+				B4B470832523BCEB008F0155 /* StorageManager.swift in Sources */,
+				B41AB1D025E59BE700DD8B0C /* DeleteTalk.swift in Sources */,
+				B41AB1AE25E5837900DD8B0C /* VerifyUserEmail.swift in Sources */,
+				B4B46FFC25232C5D008F0155 /* DatabaseManager.swift in Sources */,
+				B4B46F9625225412008F0155 /* SignUpViewController.swift in Sources */,
+				B4B46FBD25225D4E008F0155 /* Appearance.swift in Sources */,
+				B41AB1BF25E5884D00DD8B0C /* AddMessage.swift in Sources */,
+				B45402A32528722200CDFFD7 /* SingleTalkTableViewCell.swift in Sources */,
+				B4B46F9B25225423008F0155 /* SignInViewController.swift in Sources */,
+				B41AB1DA25E5A1BC00DD8B0C /* PhotoViewerViewController.swift in Sources */,
+				B4B46FA52522543D008F0155 /* ProfileViewController.swift in Sources */,
+				B4B46FA025225432008F0155 /* SingleTalkViewController.swift in Sources */,
+				B4B46F5E25225344008F0155 /* SceneDelegate.swift in Sources */,
+				B41AB19A25E55CDB00DD8B0C /* Location.swift in Sources */,
+				B41AB19225E55C9800DD8B0C /* Media.swift in Sources */,
+				B41AB1D525E59EE400DD8B0C /* StorageError.swift in Sources */,
+				B4B46FD525230C61008F0155 /* ChangeProfileImage.swift in Sources */,
+				B45402A8252878EA00CDFFD7 /* Talk.swift in Sources */,
+				B4B4708D25251831008F0155 /* Message.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B46F6A25225344008F0155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B46F7325225344008F0155 /* CleverTalksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B46F7525225344008F0155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B46F7E25225344008F0155 /* CleverTalksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4B46F7025225344008F0155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4B46F5725225344008F0155 /* CleverTalks */;
+			targetProxy = B4B46F6F25225344008F0155 /* PBXContainerItemProxy */;
+		};
+		B4B46F7B25225344008F0155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4B46F5725225344008F0155 /* CleverTalks */;
+			targetProxy = B4B46F7A25225344008F0155 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4B46F6125225344008F0155 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4B46F6225225344008F0155 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B4B46F6625225344008F0155 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4B46F6725225344008F0155 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4B46F8025225344008F0155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4B46F8125225344008F0155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4B46F8325225344008F0155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048D74616D08474F5BB095B2 /* Pods-CleverTalks.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L284H832KA;
+				INFOPLIST_FILE = CleverTalks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B4B46F8425225344008F0155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D82D3B9DD6CA1FD1604204E5 /* Pods-CleverTalks.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L284H832KA;
+				INFOPLIST_FILE = CleverTalks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B4B46F8625225344008F0155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 015CDF84A94E8B4F5D88EB63 /* Pods-CleverTalksTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L284H832KA;
+				INFOPLIST_FILE = CleverTalksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleverTalks.app/CleverTalks";
+			};
+			name = Debug;
+		};
+		B4B46F8725225344008F0155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B533BCD4FA41CEDC54B5079 /* Pods-CleverTalksTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L284H832KA;
+				INFOPLIST_FILE = CleverTalksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleverTalks.app/CleverTalks";
+			};
+			name = Release;
+		};
+		B4B46F8925225344008F0155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD25C4485328947345662C48 /* Pods-CleverTalks-CleverTalksUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L284H832KA;
+				INFOPLIST_FILE = CleverTalksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CleverTalks;
+			};
+			name = Debug;
+		};
+		B4B46F8A25225344008F0155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66BDE5444F28BD2729A730C4 /* Pods-CleverTalks-CleverTalksUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L284H832KA;
+				INFOPLIST_FILE = CleverTalksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irynavb.CleverTalksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CleverTalks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4B46F5325225344008F0155 /* Build configuration list for PBXProject "CleverTalks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4B46F8025225344008F0155 /* Debug */,
+				B4B46F8125225344008F0155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4B46F8225225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4B46F8325225344008F0155 /* Debug */,
+				B4B46F8425225344008F0155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4B46F8525225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4B46F8625225344008F0155 /* Debug */,
+				B4B46F8725225344008F0155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4B46F8825225344008F0155 /* Build configuration list for PBXNativeTarget "CleverTalksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4B46F8925225344008F0155 /* Debug */,
+				B4B46F8A25225344008F0155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4B46F5025225344008F0155 /* Project object */;
+}

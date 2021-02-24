@@ -1,0 +1,6 @@
+framework module Pods_CleverTalks_CleverTalksUITests {
+  umbrella header "Pods-CleverTalks-CleverTalksUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

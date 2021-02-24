@@ -1,0 +1,6 @@
+framework module Pods_CleverTalks {
+  umbrella header "Pods-CleverTalks-umbrella.h"
+
+  export *
+  module * { export * }
+}
