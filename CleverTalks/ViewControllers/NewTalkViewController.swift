@@ -12,7 +12,7 @@ class NewTalkViewController: UIViewController {
 
     public var completion: ((SearchResult) -> (Void))?
 
-    private let spinner = JGProgressHUD(style: .light)
+    private let spinner = JGProgressHUD(style: .dark)
 
     private var users = [[String: String]]()
 
