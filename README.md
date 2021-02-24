@@ -1,5 +1,7 @@
 ## CleverTalks
 
+<img src="images/icon.png" alt="Icon of the project application">
+
 This is an iOS application written in Swift using programmatic approach to building layout. 
 
 ## The application can send and receive messages in real time
