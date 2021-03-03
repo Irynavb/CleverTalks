@@ -45,11 +45,13 @@ class SingleTalkTableViewCell: UITableViewCell {
     }
 
     func configure(with model: Talk) {
+
         userMessageLabel.text = model.latestMessage.text
         userNameLabel.text = model.name
 
         let path = "images/\(model.otherUserEmail)_profile_picture.png"
         StorageManager.shared.downloadURL(for: path, completion: { [weak self] result in
+
             switch result {
             case .success(let url):
 

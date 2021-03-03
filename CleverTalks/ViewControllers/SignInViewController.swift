@@ -20,14 +20,6 @@ class SignInViewController: UIViewController {
         $0.clipsToBounds = true
     }
 
-    private let imageView = UIImageView().then {
-        $0.image = #imageLiteral(resourceName: "Logo")
-        $0.contentMode = .scaleAspectFit
-        $0.layer.masksToBounds = true
-        $0.layer.borderWidth = 1.5
-        $0.layer.borderColor = UIColor.systemGreen.cgColor
-        $0.layer.opacity = 0.8    }
-
     private let emailField = CTTextField(placeholder: "Email Address").then {
         $0.returnKeyType = .continue
     }
@@ -39,6 +31,7 @@ class SignInViewController: UIViewController {
 
     private let signInButton = CTButton().then {
         $0.setTitle("Sign In", for: .normal)
+        $0.addTarget(self, action: #selector(signInPressed), for: .touchUpInside)
     }
 
     private let facebookSignInButton = FBLoginButton().then {
@@ -55,6 +48,10 @@ class SignInViewController: UIViewController {
 
         super.viewDidLoad()
 
+        view.backgroundColor = .systemBackground
+
+        title = "Clever Talks"
+
         signInObserver = NotificationCenter.default.addObserver(forName: .didSignInNotificanion, object: nil, queue: .main, using: { [weak self] _ in
             guard let strongSelf = self else {
                 return
@@ -64,21 +61,15 @@ class SignInViewController: UIViewController {
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
 
-        view.backgroundColor = .systemBackground
-
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .plain, target: self, action: #selector(signUpPressed))
-
-        signInButton.addTarget(self, action: #selector(signInPressed), for: .touchUpInside)
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         emailField.delegate = self
         passwordField.delegate = self
-
         facebookSignInButton.delegate = self
 
-        // add subviews
         view.addSubview(scrollView)
-
-        scrollView.addSubviews(imageView, emailField, passwordField, signInButton, facebookSignInButton, googleSignInButton)
+        scrollView.addSubviews( emailField, passwordField, signInButton, facebookSignInButton, googleSignInButton)
     }
 
     deinit {
@@ -91,22 +82,18 @@ class SignInViewController: UIViewController {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
         let size = scrollView.width / 3
-        imageView.frame = CGRect(x: (scrollView.width - (size/1.2)) / 2,
-                                 y: 45,
-                                 width: size/1.2,
-                                 height: size/1.2)
-        imageView.layer.cornerRadius = imageView.width / 5.0
+
         emailField.frame = CGRect(x: 30,
-                                  y: imageView.bottom + 45,
+                                  y: scrollView.top + 65,
                                   width: scrollView.width - 60,
                                   height: 52)
 
         passwordField.frame = CGRect(x: 30,
-                                  y: emailField.bottom + 30,
+                                  y: emailField.bottom + 20,
                                   width: scrollView.width - 60,
                                   height: 52)
         signInButton.frame = CGRect(x: 30,
-                                  y: passwordField.bottom + 50,
+                                  y: passwordField.bottom + 90,
                                   width: scrollView.width - 60,
                                   height: 52)
         facebookSignInButton.frame = CGRect(x: 30,
@@ -174,7 +161,7 @@ class SignInViewController: UIViewController {
 
     func alertUserSignInError() {
         let alert = UIAlertController(title: "Oh no",
-                                      message: "Please enter all information to sign in",
+                                      message: "Please enter all the information to sign in",
                                       preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title:  "Dismiss",
@@ -187,7 +174,6 @@ class SignInViewController: UIViewController {
 
     @objc private func signUpPressed() {
         let vc = SignUpViewController()
-        vc.title = "Create Account"
         vc.view.backgroundColor = .systemBackground
         navigationController?.pushViewController(vc, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = true

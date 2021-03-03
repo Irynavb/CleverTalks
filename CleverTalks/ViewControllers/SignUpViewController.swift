@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
         $0.layer.masksToBounds = true
         $0.layer.borderWidth = 2
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
+        $0.layer.borderColor = UIColor.systemBlue.cgColor
     }
 
     private let firstNameField = CTTextField(placeholder: "First Name").then {
@@ -51,7 +51,6 @@ class SignUpViewController: UIViewController {
 
         super.viewDidLoad()
 
-        title = "Create Account"
         view.backgroundColor = .systemBackground
 
 
@@ -87,7 +86,7 @@ class SignUpViewController: UIViewController {
         scrollView.frame = view.bounds
         let size = scrollView.width / 3
         imageView.frame = CGRect(x: (scrollView.width - size) / 2,
-                                 y: 50,
+                                 y: -20,
                                  width: size,
                                  height: size)
         imageView.layer.cornerRadius = imageView.width / 2.0
@@ -210,7 +209,6 @@ class SignUpViewController: UIViewController {
 
     @objc private func signUpPressed() {
         let vc = SignUpViewController()
-        vc.title = "Create Account"
         vc.view.backgroundColor = .systemBackground
         navigationController?.pushViewController(vc, animated: true)
     }

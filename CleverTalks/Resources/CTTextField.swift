@@ -26,15 +26,15 @@ class CTTextField: UITextField {
 
     private func configure() {
         layer.cornerRadius = 8
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.darkGreen.cgColor
+        layer.borderWidth = 4
+        layer.borderColor = UIColor.systemGray.cgColor
 
         autocorrectionType = .no
         autocapitalizationType = .none
 
-        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
+        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
         leftViewMode = .always
-        backgroundColor = .secondarySystemBackground
+        backgroundColor = .systemBackground
     }
 
 }

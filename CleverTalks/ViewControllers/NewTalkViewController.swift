@@ -44,14 +44,11 @@ class NewTalkViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-
         searchBar.delegate = self
 
         view.backgroundColor = .systemBackground
 
-        navigationController?.navigationBar.topItem?.titleView = searchBar
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(dismissSelf))
+        configureNavigationBar()
 
         searchBar.becomeFirstResponder()
 
@@ -62,6 +59,12 @@ class NewTalkViewController: UIViewController {
         tableView.frame = view.bounds
 
         noUsersFoundLabel.centerAnchors == view.centerAnchors
+    }
+
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.topItem?.titleView = searchBar
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(dismissSelf))
     }
 
     @objc func dismissSelf() {

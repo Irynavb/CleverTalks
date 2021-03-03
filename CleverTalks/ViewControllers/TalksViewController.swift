@@ -35,7 +35,6 @@ class TalksViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeButtonTapped))
-//        view.backgroundColor = .backgroundLightGreen
 
         view.addSubviews(tableView, noTalksLabel)
         
@@ -66,7 +65,9 @@ class TalksViewController: UIViewController {
         let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
 
         DatabaseManager.shared.getAllTalks(for: safeEmail, completion: { [weak self] result in
+
             switch result {
+
             case .success(let talks):
                 guard !talks.isEmpty else {
                     self?.tableView.isHidden = true
@@ -80,10 +81,12 @@ class TalksViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
+                
             case .failure(let error):
                 self?.tableView.isHidden = true
                 self?.noTalksLabel.isHidden = false
                 print("failed to get talks \(error)")
+
             }
         })
     }

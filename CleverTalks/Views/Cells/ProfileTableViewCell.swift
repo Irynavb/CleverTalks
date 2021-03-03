@@ -13,6 +13,7 @@ class ProfileTableViewCell: UITableViewCell {
 
     public func setUp(with viewModel: ProfileViewModel) {
         self.textLabel?.text = viewModel.title
+        
         switch viewModel.viewModelType {
         case .info:
             textLabel?.textAlignment = .left
