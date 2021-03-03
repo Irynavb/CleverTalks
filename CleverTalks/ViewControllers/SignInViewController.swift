@@ -28,40 +28,17 @@ class SignInViewController: UIViewController {
         $0.layer.borderColor = UIColor.systemGreen.cgColor
         $0.layer.opacity = 0.8    }
 
-    private let emailField = UITextField().then {
-        $0.autocapitalizationType = .none
-        $0.autocorrectionType = .no
+    private let emailField = CTTextField(placeholder: "Email Address").then {
         $0.returnKeyType = .continue
-        $0.layer.cornerRadius = 8
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-        $0.placeholder = "Email Address"
-        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        $0.leftViewMode = .always
-        $0.backgroundColor = .secondarySystemBackground
     }
 
-    private let passwordField = UITextField().then {
-        $0.autocapitalizationType = .none
-        $0.autocorrectionType = .no
+    private let passwordField = CTTextField(placeholder: "Password (8+ characters)").then {
         $0.returnKeyType = .done
-        $0.layer.cornerRadius = 8
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-        $0.placeholder = "Password (8+ characters)"
-        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        $0.leftViewMode = .always
         $0.isSecureTextEntry = true
-        $0.backgroundColor = .secondarySystemBackground
     }
 
-    private let signInButton = UIButton().then {
+    private let signInButton = CTButton().then {
         $0.setTitle("Sign In", for: .normal)
-        $0.backgroundColor = .darkBrown
-        $0.setTitleColor(.darkGreen, for: .normal)
-        $0.layer.cornerRadius = 8
-        $0.layer.masksToBounds = true
-        $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
     }
 
     private let facebookSignInButton = FBLoginButton().then {
@@ -87,7 +64,6 @@ class SignInViewController: UIViewController {
 
         GIDSignIn.sharedInstance()?.presentingViewController = self
 
-        title = "Welcome Back!"
         view.backgroundColor = .systemBackground
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .plain, target: self, action: #selector(signUpPressed))
@@ -102,13 +78,7 @@ class SignInViewController: UIViewController {
         // add subviews
         view.addSubview(scrollView)
 
-        scrollView.addSubview(imageView)
-        scrollView.addSubview(emailField)
-        scrollView.addSubview(passwordField)
-        scrollView.addSubview(signInButton)
-        scrollView.addSubview(facebookSignInButton)
-        scrollView.addSubview(googleSignInButton)
-
+        scrollView.addSubviews(imageView, emailField, passwordField, signInButton, facebookSignInButton, googleSignInButton)
     }
 
     deinit {
@@ -220,6 +190,7 @@ class SignInViewController: UIViewController {
         vc.title = "Create Account"
         vc.view.backgroundColor = .systemBackground
         navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 }

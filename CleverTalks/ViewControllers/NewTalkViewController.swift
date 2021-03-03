@@ -40,8 +40,7 @@ class NewTalkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(tableView)
-        view.addSubview(noUsersFoundLabel)
+        view.addSubviews(tableView, noUsersFoundLabel)
 
         tableView.delegate = self
         tableView.dataSource = self

@@ -29,8 +29,7 @@ class NewTalkCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(userImageView)
-        contentView.addSubview(userNameLabel)
+        contentView.addSubviews(userImageView, userNameLabel)
     }
 
     required init?(coder: NSCoder) {

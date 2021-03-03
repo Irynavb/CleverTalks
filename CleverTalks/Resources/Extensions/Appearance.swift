@@ -52,6 +52,12 @@ extension UIView {
         self.frame.size.width + self.frame.origin.x
 
     }
+
+    func addSubviews(_ views: UIView...) {
+        for view in views {
+            addSubview(view)
+        }
+    }
 }
 
 extension Notification.Name {

@@ -26,66 +26,25 @@ class SignUpViewController: UIViewController {
         $0.layer.borderColor = UIColor.darkGreen.cgColor
     }
 
-    private let firstNameField = UITextField().then {
-        $0.autocapitalizationType = .none
-        $0.autocorrectionType = .no
+    private let firstNameField = CTTextField(placeholder: "First Name").then {
         $0.returnKeyType = .continue
-        $0.layer.cornerRadius = 8
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-        $0.placeholder = "First Name"
-        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        $0.leftViewMode = .always
-        $0.backgroundColor = .secondarySystemBackground
     }
 
-    private let lastNameField = UITextField().then {
-        $0.autocapitalizationType = .none
-        $0.autocorrectionType = .no
+    private let lastNameField = CTTextField(placeholder: "Last Name").then {
         $0.returnKeyType = .continue
-        $0.layer.cornerRadius = 8
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-        $0.placeholder = "Last Name"
-        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        $0.leftViewMode = .always
-        $0.backgroundColor = .secondarySystemBackground
     }
 
-    private let emailField = UITextField().then {
-        $0.autocapitalizationType = .none
-        $0.autocorrectionType = .no
+    private let emailField = CTTextField(placeholder: "Email Address").then {
         $0.returnKeyType = .continue
-        $0.layer.cornerRadius = 8
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-        $0.placeholder = "Email Address"
-        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        $0.leftViewMode = .always
-        $0.backgroundColor = .secondarySystemBackground
     }
 
-    private let passwordField = UITextField().then {
-        $0.autocapitalizationType = .none
-        $0.autocorrectionType = .no
+    private let passwordField = CTTextField(placeholder:"Password (8+ characters)").then {
         $0.returnKeyType = .done
-        $0.layer.cornerRadius = 8
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.darkGreen.cgColor
-        $0.placeholder = "Password (8+ characters)"
-        $0.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
-        $0.leftViewMode = .always
         $0.isSecureTextEntry = true
-        $0.backgroundColor = .secondarySystemBackground
     }
 
-    private let signUpButton = UIButton().then {
+    private let signUpButton = CTButton().then {
         $0.setTitle("Sign Up", for: .normal)
-        $0.backgroundColor = .darkBrown
-        $0.setTitleColor(.white, for: .normal)
-        $0.layer.cornerRadius = 8
-        $0.layer.masksToBounds = true
-        $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
     }
 
     override func viewDidLoad() {
@@ -104,12 +63,7 @@ class SignUpViewController: UIViewController {
         // add subviews
         view.addSubview(scrollView)
 
-        scrollView.addSubview(imageView)
-        scrollView.addSubview(firstNameField)
-        scrollView.addSubview(lastNameField)
-        scrollView.addSubview(emailField)
-        scrollView.addSubview(passwordField)
-        scrollView.addSubview(signUpButton)
+        scrollView.addSubviews(imageView, firstNameField, lastNameField, emailField, passwordField, signUpButton)
 
         imageView.isUserInteractionEnabled  = true
         scrollView.isUserInteractionEnabled = true

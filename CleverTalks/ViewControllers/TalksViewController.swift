@@ -37,8 +37,8 @@ class TalksViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeButtonTapped))
 //        view.backgroundColor = .backgroundLightGreen
 
-        view.addSubview(tableView)
-        view.addSubview(noTalksLabel)
+        view.addSubviews(tableView, noTalksLabel)
+        
         tableView.delegate = self
         tableView.dataSource = self
 

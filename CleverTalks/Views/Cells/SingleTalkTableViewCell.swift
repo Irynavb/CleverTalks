@@ -30,9 +30,7 @@ class SingleTalkTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier reuseidentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseidentifier)
 
-        contentView.addSubview(userImageView)
-        contentView.addSubview(userNameLabel)
-        contentView.addSubview(userMessageLabel)
+        contentView.addSubviews(userImageView, userNameLabel, userMessageLabel)
 
     }
 
