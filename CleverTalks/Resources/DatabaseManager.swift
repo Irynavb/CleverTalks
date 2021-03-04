@@ -12,7 +12,7 @@ import CoreLocation
 
 final class DatabaseManager {
 
-    public static let shared = DatabaseManager()
+    static let shared = DatabaseManager()
 
     let database = Database.database().reference()
 
@@ -25,6 +25,7 @@ final class DatabaseManager {
     /// creates a new talk with target user email  and first sent message
     public func createNewTalk(with otherUserEmail: String, name: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
         guard let currentEmail = UserDefaults.standard.value(forKey: "email") as? String,
+
             let currentName = UserDefaults.standard.value(forKey: "name") as? String else {
                 return
         }
@@ -44,6 +45,8 @@ final class DatabaseManager {
             let dateString = SingleTalkViewController.dateFormatter.string(from: messageDate)
 
             var message = ""
+
+            let talkId = "talk_\(firstMessage.messageId)"
 
             switch firstMessage.kind {
 
@@ -68,8 +71,6 @@ final class DatabaseManager {
             case .custom(_):
                 break
             }
-
-            let talkId = "talk_\(firstMessage.messageId)"
 
             let newTalkData: [String: Any] = [
                 "id": talkId,
