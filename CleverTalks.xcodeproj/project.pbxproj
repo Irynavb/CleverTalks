@@ -25,6 +25,7 @@
 		B41AB1EB25E5FEF200DD8B0C /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AB1EA25E5FEF200DD8B0C /* ProfileTableViewCell.swift */; };
 		B423610E25EF358C00461987 /* CTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423610D25EF358C00461987 /* CTTextField.swift */; };
 		B423611325EF39C300461987 /* CTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423611225EF39C300461987 /* CTButton.swift */; };
+		B423611925F1372A00461987 /* MainScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = B423611825F1372A00461987 /* MainScreenShot.png */; };
 		B45402A32528722200CDFFD7 /* SingleTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */; };
 		B45402A8252878EA00CDFFD7 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45402A7252878EA00CDFFD7 /* Talk.swift */; };
 		B4B46F5C25225344008F0155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B46F5B25225344008F0155 /* AppDelegate.swift */; };
@@ -89,6 +90,7 @@
 		B41AB1EA25E5FEF200DD8B0C /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B423610D25EF358C00461987 /* CTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTTextField.swift; sourceTree = "<group>"; };
 		B423611225EF39C300461987 /* CTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTButton.swift; sourceTree = "<group>"; };
+		B423611825F1372A00461987 /* MainScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainScreenShot.png; path = images/MainScreenShot.png; sourceTree = SOURCE_ROOT; };
 		B45402A22528722200CDFFD7 /* SingleTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTalkTableViewCell.swift; sourceTree = "<group>"; };
 		B45402A7252878EA00CDFFD7 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		B4B46F5825225344008F0155 /* CleverTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B423611725F1370F00461987 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B423611825F1372A00461987 /* MainScreenShot.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		B4B46F4F25225344008F0155 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +283,7 @@
 				B41AB1E925E5FECA00DD8B0C /* Cells */,
 				B4B46FBA25225D1D008F0155 /* Storyboards */,
 				B4B46F6425225344008F0155 /* Assets.xcassets */,
+				B423611725F1370F00461987 /* images */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +445,7 @@
 			files = (
 				B4B46F6825225344008F0155 /* LaunchScreen.storyboard in Resources */,
 				B4B46FF7252317AD008F0155 /* GoogleService-Info.plist in Resources */,
+				B423611925F1372A00461987 /* MainScreenShot.png in Resources */,
 				B4B46F6525225344008F0155 /* Assets.xcassets in Resources */,
 				B4B46F6325225344008F0155 /* Main.storyboard in Resources */,
 			);
