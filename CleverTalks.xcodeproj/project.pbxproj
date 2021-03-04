@@ -226,6 +226,7 @@
 				B4B46FAA25225455008F0155 /* Views */,
 				B4B46F8E25225383008F0155 /* ViewControllers */,
 				B4B46F6925225344008F0155 /* Info.plist */,
+				B423611725F1370F00461987 /* images */,
 			);
 			path = CleverTalks;
 			sourceTree = "<group>";
@@ -283,7 +284,6 @@
 				B41AB1E925E5FECA00DD8B0C /* Cells */,
 				B4B46FBA25225D1D008F0155 /* Storyboards */,
 				B4B46F6425225344008F0155 /* Assets.xcassets */,
-				B423611725F1370F00461987 /* images */,
 			);
 			path = Views;
 			sourceTree = "<group>";

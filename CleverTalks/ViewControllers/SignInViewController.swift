@@ -81,7 +81,6 @@ class SignInViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
-        let size = scrollView.width / 3
 
         emailField.frame = CGRect(x: 30,
                                   y: scrollView.top + 65,
