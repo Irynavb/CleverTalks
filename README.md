@@ -21,4 +21,6 @@ This is an iOS application written in Swift using programmatic approach to build
 - AVFoundation
 - AVKit
 
-Also, I used `Sketch` to create the assets for the `LaunchScreen` and the `AppIcon`
+Also, I used `Sketch` to create the assets for the `LaunchScreen` and the `AppIcon`.
+
+Referenced the `Human Interface Guidelines` by Apple for the UI principles implementation. 
